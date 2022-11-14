@@ -11,10 +11,12 @@ public class InputCatcher: MonoBehaviour, IPointerDownHandler, IDragHandler, IPo
     private float _direction;
     private float _screenHalf;
     public UnityEvent<float> OnDragged { get; private set; }
-
+    public UnityEvent OnDragEnded { get; private set; }
+    
     public void Init()
     {
         OnDragged = new UnityEvent<float>();
+        OnDragEnded = new UnityEvent();
         
         _screenHalf = Screen.width / 2f;
         _isEnabled = false;
@@ -53,8 +55,9 @@ public class InputCatcher: MonoBehaviour, IPointerDownHandler, IDragHandler, IPo
     {
         if(!CanHandle(eventData.pointerId))
             return;
-        
-        var centerDelta = eventData.position.x - _screenHalf;
+
+        var x = Mathf.Clamp(eventData.position.x, 0, Screen.width);
+        var centerDelta = x - _screenHalf;
         _direction = centerDelta / _screenHalf;
     }
 
@@ -66,6 +69,8 @@ public class InputCatcher: MonoBehaviour, IPointerDownHandler, IDragHandler, IPo
         _hasTap = false;
         _tapId = -1;
         _direction = 0f;
+        
+        OnDragEnded.Invoke();
     }
 
     private bool CanHandle(int pointerId)

@@ -739,6 +739,9 @@ MonoBehaviour:
   - {fileID: 163020264}
   - {fileID: 50015242}
   - {fileID: 297708588}
+  - {fileID: 1635219647}
+  - {fileID: 1332227670}
+  maxPositionXOffset: 4.3
 --- !u!1001 &382235430
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -852,7 +855,7 @@ RectTransform:
   m_AnchorMin: {x: 0.32, y: 0.725}
   m_AnchorMax: {x: 0.68, y: 0.725}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 390}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &453240620
 MonoBehaviour:
@@ -972,7 +975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AspectMode: 2
+  m_AspectMode: 1
   m_AspectRatio: 1
 --- !u!1001 &502927335
 PrefabInstance:
@@ -2176,6 +2179,9 @@ MonoBehaviour:
   playCameraPoint: {fileID: 1562507865}
   target: {fileID: 8592876449779396700}
   smooth: 0.7
+  moveOffset: 1.5
+  angleZOffset: 1
+  durationDoMove: 1
 --- !u!4 &989835666 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4914402634715479827, guid: 17a42bf06e41fa349aa622dac9e52af9, type: 3}
@@ -2378,7 +2384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AspectMode: 1
-  m_AspectRatio: 6.35
+  m_AspectRatio: 4.95
 --- !u!114 &1107960394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3221,7 +3227,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56.4
+  m_fontSize: 17.8
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4248,7 +4254,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56.4
+  m_fontSize: 17.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4284,7 +4290,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: 0.35528564}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

@@ -20,6 +20,7 @@ public class GameManager: MonoBehaviour
         startButton.Init(this);
         starter.Init(stickmanController);
         stickmanController.Init(inputCatcher);
+        followCamera.Init(inputCatcher);
     }
     
     public void StartGame()
